@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 220 14.3% 4.1%;
+    --muted: 210 4.8% 95.9%;
+    --muted-foreground: 220 5.3% 44.7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 14.3% 4.1%;
+    --border: 220 5.9% 90%;
+    --input: 220 5.9% 90%;
+    --primary: 210 45% 25%; /* #2c3e50 */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 8% 95%; /* #ecf0f1 */
+    --secondary-foreground: 220 9.8% 10%;
+    --accent: 5 78% 57%; /* #e74c3c */
+    --accent-foreground: 0 0% 100%;
+    --success: 145 63% 42%; /* #27ae60 */
+    --success-foreground: 0 0% 100%;
+    --progress: 24 87% 52%; /* #e67e22 */
+    --progress-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 210 45% 25%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 225 9% 9%;
+    --foreground: 0 0% 98%;
+    --muted: 210 5% 15.9%;
+    --muted-foreground: 210 5% 64.9%;
+    --popover: 210 10% 5%;
+    --popover-foreground: 0 0% 98%;
+    --card: 210 10% 7%;
+    --card-foreground: 0 0% 98%;
+    --border: 210 8% 20%;
+    --input: 210 8% 20%;
+    --primary: 210 40% 30%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 10% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 5 78% 57%;
+    --accent-foreground: 0 0% 98%;
+    --success: 145 63% 42%;
+    --success-foreground: 0 0% 98%;
+    --progress: 24 87% 52%;
+    --progress-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 210 40% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Noto Sans JP", sans-serif;
+  }
+}
+
+.breathing-circle {
+  transition: transform 2s ease-in-out;
+}
+
+.breathing-circle.inhale {
+  transform: scale(1.25);
+}
+
+.breathing-circle.hold {
+  transform: scale(1.25);
+}
+
+.breathing-circle.exhale {
+  transform: scale(0.75);
+}
+
+.breathing-circle.ready {
+  transform: scale(1);
+}
